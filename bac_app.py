@@ -210,7 +210,7 @@ if st.session_state.start_monitoring and st.session_state.monitoring_start_time:
                 st.success(f"{icon} {message}")
         
         time.sleep(REFRESH_INTERVAL_SECONDS)
-        st.experimental_rerun() # Force rerun to update UI if time.sleep is used
+        st.rerun() # Force rerun to update UI if time.sleep is used
 
 else: # If monitoring is not active
     bac_placeholder.empty()
